@@ -1,0 +1,48 @@
+// Requisito: Capas de cascada aplicadas específicamente
+@layer utilities {
+  .contact-panel {
+    // Uso de colores hwb y unidades relativas al contenedor
+    background-color: hwb(42 90% 5%);
+    padding: 5cqi; 
+    border: 2px solid hwb(218 40% 20% / 0.1);
+  }
+}
+
+.feature-grid {
+  gap: 1rem;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.speaker-role {
+  margin-bottom: 1rem;
+  color: $secondary;
+}
+
+.speaker-card {
+  min-height: 20rem;
+}
+
+button[type="submit"] {
+  min-width: 12rem;
+}
+
+.page-noticia .article-aside {
+  top: 0;
+}
+
+@container (min-width: 65rem) {
+  .speaker-grid {
+    justify-content: space-between;
+  }
+
+  .speaker-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .article-body {
+    grid-template-columns: minmax(0, 1fr) 22rem;
+  }
+}

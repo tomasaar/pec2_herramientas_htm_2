@@ -1,0 +1,40 @@
+:root {
+  --surface: #eff5fb;
+  --surface-dark: #d7e5f2;
+  --text: #1e3967;
+  --accent: #f7c64b;
+  --shadow: 0 1rem 2rem rgb(30 57 103 / 14%);
+  --radius: 1.5rem;
+}
+
+$primary: #1e3967;
+$secondary: #2c6d90;
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Personalización de componentes Bootstrap
+$badge-padding-x: 0.75em;
+$badge-padding-y: 0.5em;
+$success: #4ab5b1;
+$info: #4ab5b1;
+$warning: #f7c64b;
+$danger: #e67a4c;
+$body-bg: #eff5fb;
+$body-color: #1e3967;
+$font-family-base: "Montserrat", system-ui, sans-serif;
+$font-family-serif: "Montserrat", system-ui, sans-serif;
+$font-family-mono: "Montserrat", ui-monospace, SFMono-Regular, monospace;
+$font-size-base: 1rem;
+$border-radius: 1.25rem;
+$btn-border-radius: 1.25rem;
+$headings-margin-bottom: 1rem;
+$headings-font-family: $font-family-serif;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger
+);

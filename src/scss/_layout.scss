@@ -1,0 +1,564 @@
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  color: $body-color;
+  background: radial-gradient(circle at top, rgba($secondary, 0.2), transparent 35%), linear-gradient(180deg, $body-bg 0%, #e9eff5 100%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, darken($primary, 5%) 0%, $secondary 100%);
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba($warning, 0.18);
+}
+
+.site-header .navbar,
+.site-header .navbar-collapse {
+  background: transparent !important;
+}
+
+.site-header .navbar-brand,
+.site-header .nav-link {
+  color: #fff !important;
+}
+
+// Header transparente solo en el Index (requiere clase page-home en <body>)
+.page-home .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent !important;
+  border-bottom: none;
+}
+
+.page-home .site-header .navbar,
+.page-home .site-header .navbar-collapse,
+.page-home .site-header .navbar-brand,
+.page-home .site-header .nav-link {
+  background-color: transparent !important;
+}
+
+.page-home .navbar .nav-link,
+.page-home .navbar-brand {
+  color: #fff !important;
+}
+
+.page-home .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.page-home .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.site-header {
+  transition: background 0.3s ease, border-bottom 0.3s ease;
+}
+
+.site-header .navbar-nav .nav-link {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  opacity: 1;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  display: grid;
+  gap: 2.5rem;
+  container-type: inline-size;
+}
+
+.hero {
+  display: block;
+  gap: 2rem;
+}
+
+.hero-copy {
+  padding: 2rem 1.75rem;
+  background: rgb(255 255 255 / 72%);
+  border-radius: var(--radius);
+  border: 1px solid rgb(45 42 36 / 8%);
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.5rem, 3vw, 4.25rem);
+  margin: 1rem 0 1.25rem;
+  line-height: 1.05;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-outline-secondary {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: $secondary;
+  border-color: $secondary;
+  transform: translateY(-2px);
+  box-shadow: 0 0.85rem 1.5rem rgb(30 57 103 / 18%);
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-outline-secondary:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border-color: $warning;
+  transform: translateY(-2px);
+}
+
+.hero-card {
+  @include section-card;
+  padding: 2rem;
+}
+
+.hero-features {
+  @include section-card;
+  padding: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.feature-item {
+  background: var(--surface-dark);
+  padding: 1.25rem;
+  border-radius: 1rem;
+}
+
+.section-header {
+  display: grid;
+  gap: 1rem;
+}
+
+.speaker-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.speaker-card {
+  flex: 1 1 18rem;
+  min-width: 18rem;
+}
+
+.speaker-avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 165px;
+  display: grid;
+  place-items: center;
+  background: $secondary;
+  color: $body-color;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.article-page .article-body {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.article-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 6px solid $secondary;
+  background: rgba(44, 109, 144, 0.1);
+  font-style: italic;
+}
+
+.article-list-section ul {
+  padding-left: 1.25rem;
+}
+
+.note-card {
+  @include section-card;
+  padding: 1.5rem;
+}
+
+.contact-wrapper {
+  min-height: 90lvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.contact-panel {
+  display: grid;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+  padding: 3rem;
+  background: transparent;
+  border-radius: 0;
+}
+
+.contact-panel header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: $primary;
+}
+
+.contact-panel p {
+  font-size: 1.1rem;
+  color: rgba($body-color, 0.8);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact-form .form-control {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  background: transparent;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-bottom-color: $primary;
+  box-shadow: none;
+  outline: none;
+}
+
+.contact-form .btn {
+  align-self: start;
+  border: 2px solid $primary;
+  background: transparent;
+  color: $primary;
+  border-radius: 0;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.contact-form .btn:hover {
+  background: $primary;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: $secondary;
+  }
+  p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.hero-poster {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(28rem, 42rem);
+  align-items: center;
+  justify-items: end;
+  text-align: left;
+  gap: 2rem;
+  min-height: calc(100svh - 7rem);
+  padding: 2rem 2rem 3rem 2rem;
+  width: 100vw;
+  max-width: 100%;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+}
+
+.page-home .hero-poster::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30, 57, 103, 0.96), rgba(44, 109, 144, 0.92));
+  z-index: 0;
+}
+
+.page-home .hero-poster .hero-visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: rgba(30, 57, 103, 0.55);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 0;
+}
+
+.hero-poster .hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 42rem);
+  align-self: center;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0.75rem 2rem rgba(30, 57, 103, 0.18);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-radius: 2rem;
+  padding: 2rem 2.25rem;
+}
+
+.hero-poster .hero-copy .eyebrow,
+.hero-poster .hero-copy .lead,
+.hero-poster .hero-copy h1 {
+  color: #fff;
+}
+
+.hero-poster .hero-copy .lead {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.page-home .hero-poster {
+  padding-top: 0;
+}
+
+.hero-poster .hero-visual i {
+  font-size: 4rem;
+  color: $primary;
+}
+
+.hero-poster .hero-copy {
+  max-width: 52rem;
+}
+
+.hero-poster .eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-weight: 700;
+  color: $secondary;
+}
+
+.hero-poster .lead {
+  margin: 1.25rem auto 0;
+  color: rgba(45, 42, 36, 0.82);
+}
+
+.article-hero {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+  background: rgba(74, 181, 177, 0.1);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+.article-hero-visual {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1.5rem;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(45, 42, 36, 0.08);
+}
+
+.article-hero-visual i {
+  font-size: 2rem;
+  color: $primary;
+}
+
+.article-hero .eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 700;
+  color: $secondary;
+}
+
+.article-hero .byline {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.site-footer {
+  padding: 1.5rem 1.25rem;
+  background: linear-gradient(135deg, #e67a4c, #2c6d90, #4ab5b1);
+  border-top: none;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav li {
+  list-style: none;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+}
+
+.footer-social a {
+  margin-left: 0.75rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-social {
+    width: 100%;
+  }
+}
+
+@supports (display: grid) {
+  .hero-poster {
+    display: grid;
+    grid-template-areas: 
+      "visual"
+      "copy";
+    align-items: center;
+
+    @media (min-width: 65rem) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "copy visual";
+    }
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+  }
+
+  .page-wrapper {
+    gap: 3rem;
+  }
+
+  .contact-panel {
+    grid-template-columns: minmax(0, 1.3fr) minmax(22rem, 1fr);
+    align-items: start;
+  }
+}
+
+@supports not (display: grid) {
+  .hero-card,
+  .hero-copy,
+  .hero-features,
+  .note-card,
+  .contact-panel {
+    margin: 0 auto;
+  }
+}
+
+@container (min-width: 56rem) {
+  .page-wrapper {
+    padding-top: 2.5rem;
+  }
+
+  .hero-copy {
+    padding: 3rem;
+  }
+
+  .article-body {
+    grid-template-columns: minmax(0, 1.3fr) minmax(22rem, 1fr);
+  }
+}

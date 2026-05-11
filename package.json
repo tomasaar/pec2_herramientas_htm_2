@@ -1,0 +1,29 @@
+{
+  "name": "jornadas-artesania",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de jornadas de artesanía con Sass, Bootstrap, Stylelint y container queries.",
+  "scripts": {
+    "build": "npm run sass && npm run postcss",
+    "sass": "sass --style=expanded --load-path=node_modules src/scss/main.scss dist/css/main.css",
+    "postcss": "postcss dist/css/main.css --use autoprefixer -o dist/css/main.css",
+    "lint:css": "stylelint src/scss/**/*.scss",
+    "start": "live-server --port=5500 --open=src"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "bootstrap": "^5.3.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^10.1.0",
+    "postcss-scss": "^4.0.3",
+    "sass": "^1.72.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^30.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-scss": "^4.7.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1"
+  }
+}

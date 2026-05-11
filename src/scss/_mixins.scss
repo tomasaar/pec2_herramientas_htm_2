@@ -1,0 +1,14 @@
+@function fluid-size($min, $max) {
+  @return calc(#{$min} + (#{$max} - #{$min}) * ((100vw - 320px) / 880));
+}
+
+@function accent-tone($amount) {
+  @return color.mix($primary, white, $amount);
+}
+
+@mixin section-card {
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgb(45 42 36 / 8%);
+}
