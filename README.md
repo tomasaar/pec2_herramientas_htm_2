@@ -1,255 +1,178 @@
 # PEC2 - Jornadas de Artesanía
 
-## Descripción del Proyecto
+## 🚀 Inicio Rápido
 
-Esta Práctica de Evaluación Continua 2 (PEC2) del módulo "Herramientas HTML y CSS" de la Maestría en Desarrollo de Sitios y Aplicaciones Web de la Universitat Oberta de Catalunya (UOC) consiste en el desarrollo de un sitio web responsive para "Jornadas de Artesanía". El proyecto implementa un diseño moderno y minimalista utilizando tecnologías avanzadas de CSS, con énfasis en la accesibilidad, la responsividad y las mejores prácticas de desarrollo front-end.
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/tomasaar/pec2_herramientas_htm_2.git
+cd pec2-herramientas-html-css
+```
 
-El sitio web presenta cuatro páginas principales: inicio, ponentes, agenda y contacto, todas ellas optimizadas para dispositivos móviles, tablets y escritorio. Se ha utilizado una paleta de colores premium, efectos de vidrio (glassmorphism), gradientes y tipografía elegante para crear una experiencia visual coherente y atractiva.
+### 2. Instalar dependencias
+```bash
+npm install
+```
 
-## Objetivos de la PEC2 Cumplidos
+### 3. Construir el proyecto
+```bash
+npm run build
+```
 
-- ✅ Desarrollo de 4 páginas web responsive
-- ✅ Integración de Sass y Bootstrap 5
-- ✅ Implementación de CSS moderno (Grid, Flexbox, container queries)
-- ✅ Uso de pseudoclases avanzadas (:has/:is)
-- ✅ Configuración de Stylelint para linting de CSS
-- ✅ Fidelidad a los wireframes proporcionados
-- ✅ Optimización de rendimiento y accesibilidad
-- ✅ Documentación técnica completa
+### 4. Ejecutar en desarrollo
+```bash
+npm start
+```
+> Se abrirá automáticamente en http://localhost:5500
 
-## Tecnologías Utilizadas
+## 📋 Información del Proyecto
 
-### Core Technologies
-- **HTML5**: Estructura semántica y accesible
-- **Sass/SCSS**: Preprocesador CSS con arquitectura modular
-- **Bootstrap 5**: Framework CSS personalizado con variables Sass
-- **CSS Moderno**: Técnicas avanzadas de layout y efectos visuales
+**PEC2 - Herramientas HTML y CSS**  
+**Máster en Desarrollo de Sitios y Aplicaciones Web**  
+**Universitat Oberta de Catalunya (UOC)**
 
-### Herramientas de Desarrollo
-- **PostCSS/Autoprefixer**: Compatibilidad cross-browser automática
-- **Stylelint**: Linting y validación de código CSS
-- **Live Server**: Servidor de desarrollo local
-- **npm**: Gestión de dependencias y scripts
+Este proyecto implementa un sitio web responsive de 4 páginas para "Jornadas de Artesanía" utilizando tecnologías modernas de CSS.
 
-### Recursos y Assets
-- **FontAwesome**: Iconografía consistente
-- **Google Fonts (Montserrat)**: Tipografía moderna y legible
-- **Imágenes locales**: Optimización de rendimiento sin dependencias externas
+## 🎯 Características Implementadas
 
-## Estructura del Proyecto
+- ✅ 4 páginas responsive (inicio, ponentes, agenda, contacto)
+- ✅ Sass + Bootstrap 5 personalizado
+- ✅ CSS moderno (Grid, Flexbox, container queries, :has/:is)
+- ✅ Stylelint configurado
+- ✅ Imágenes locales optimizadas
+- ✅ Diseño glassmorphism y gradientes premium
+
+## 📁 Estructura del Proyecto
 
 ```
 pec2-herramientas-html-css/
 ├── src/
-│   ├── assets/               # Imágenes y recursos locales
-│   │   ├── laura.jpg         # Avatar ponente
-│   │   ├── marta.jpg         # Avatar ponente
-│   │   ├── aitor.jpg         # Avatar ponente
-│   │   ├── carla.jpg         # Avatar ponente
-│   │   ├── lucia.jpg         # Avatar ponente
-│   │   ├── pau.jpg           # Avatar ponente
-│   │   ├── fondo_index.jpg   # Hero página inicio
-│   │   ├── dark pottery studio.jpg  # Hero página noticia
-│   │   ├── proyecto_ceramica.jpg    # Figura artículo
-│   │   └── proyecto_textil.jpg      # Figura artículo
-│   ├── scss/
-│   │   ├── main.scss          # Punto de entrada Sass
-│   │   ├── _variables.scss    # Variables de colores, fuentes y espaciado
-│   │   ├── _mixins.scss       # Mixins reutilizables
-│   │   ├── _layout.scss       # Estilos de layout global
-│   │   └── _components.scss   # Componentes específicos
-│   ├── index.html             # Página de inicio
-│   ├── ponentes.html          # Página de ponentes
-│   ├── noticia.html           # Página de agenda/noticia
-│   └── contacto.html          # Página de contacto
-├── dist/
-│   └── css/
-│       └── main.css           # CSS compilado y optimizado
-├── node_modules/              # Dependencias npm
-├── package.json               # Configuración del proyecto
-├── stylelint.config.js        # Configuración Stylelint
-├── postcss.config.js          # Configuración PostCSS
-└── README.md                  # Esta documentación
+│   ├── assets/               # Imágenes locales
+│   ├── scss/                 # Estilos Sass
+│   │   ├── main.scss         # Punto de entrada
+│   │   ├── _variables.scss   # Paleta de colores
+│   │   ├── _layout.scss      # Layout global
+│   │   └── _mixins.scss      # Mixins reutilizables
+│   ├── index.html            # Página inicio
+│   ├── ponentes.html         # Página ponentes
+│   ├── noticia.html          # Página agenda
+│   └── contacto.html         # Página contacto
+├── dist/css/main.css         # CSS compilado
+├── package.json              # Dependencias
+├── stylelint.config.js       # Configuración linting
+└── README.md                 # Esta documentación
 ```
 
-## Páginas Desarrolladas
+## 🛠️ Scripts Disponibles
 
-### 1. Página de Inicio (`index.html`)
-Diseño hero tipo poster con:
-- Imagen de fondo local optimizada
-- Efecto glassmorphism en el contenido
-- Navegación transparente en la portada
-- Botones con animaciones hover suaves
-- Layout responsive con Grid CSS
+| Comando | Descripción |
+|---------|-------------|
+| `npm run build` | Compila Sass → CSS optimizado |
+| `npm run lint:css` | Ejecuta Stylelint |
+| `npm start` | Servidor desarrollo (localhost:5500) |
 
-### 2. Página de Ponentes (`ponentes.html`)
-Grid responsivo de 6 ponentes con:
-- Avatares circulares grandes (165px border-radius)
-- Imágenes locales de alta calidad
-- Tarjetas limpias con información estructurada
-- Badges para especialidades y roles
+## 🎨 Paleta de Colores
 
-### 3. Página de Agenda (`noticia.html`)
-Artículo informativo con:
-- Hero visual con imagen local
-- Contenido tipográfico optimizado
-- Blockquotes destacados
-- Figuras con captions descriptivos
-- Aside con información complementaria
+| Color | HEX | Uso |
+|-------|-----|-----|
+| Azul Principal | `#1e3967` | Identidad principal |
+| Azul Secundario | `#2c6d90` | Bordes, navegación |
+| Verde Agua | `#4ab5b1` | Estados, acentos |
+| Amarillo | `#f7c64b` | Llamadas a acción |
+| Naranja | `#e67a4c` | Gradientes, footer |
 
-### 4. Página de Contacto (`contacto.html`)
-Formulario minimalista con:
-- Inputs con bordes inferiores (estilo moderno)
-- Validación HTML5 nativa
-- Botón outline con efectos hover
-- Sección de información de contacto
-- Layout centrado y limpio
+## 📱 Páginas del Sitio
 
-## Características Técnicas Implementadas
+### 🏠 Inicio (`index.html`)
+- Hero con imagen local y glassmorphism
+- Navegación transparente
+- Botones con hover effects
 
-### Arquitectura Sass
-- **Variables centralizadas**: Paleta de colores, tipografía, espaciado
-- **Mixins reutilizables**: Para componentes comunes
-- **Partials modulares**: Separación lógica de estilos
-- **Imports organizados**: Estructura clara y mantenible
+### 👥 Ponentes (`ponentes.html`)
+- Grid de 6 ponentes
+- Avatares circulares (165px)
+- Información estructurada
 
-### Personalización Bootstrap
-- Override de variables Sass para tema personalizado
-- Componentes extendidos (navbar, cards, forms)
-- Utilities adicionales para layout responsive
-- Integración perfecta con estilos custom
+### 📅 Agenda (`noticia.html`)
+- Artículo con hero visual
+- Blockquotes y figuras
+- Aside informativo
 
-### CSS Moderno Avanzado
-- **CSS Grid & Flexbox**: Layouts flexibles y eficientes
-- **Container Queries**: Diseño adaptativo por contenedor
-- **Pseudoclases modernas**: `:has()` y `:is()` para selectores avanzados
-- **Efectos visuales**: `backdrop-filter` para glassmorphism
-- **Colores modernos**: Notación `hwb()` para paleta premium
-- **Unidades avanzadas**: `cqi/cqw` para layouts fluidos
+### 📞 Contacto (`contacto.html`)
+- Formulario minimalista
+- Inputs con bordes inferiores
+- Layout centrado
 
-### Optimizaciones de Rendimiento
-- **Imágenes locales**: Eliminación de dependencias externas
-- **CSS optimizado**: Compilación y minificación automática
-- **Fuentes web**: Carga eficiente con preload
-- **Responsive images**: Adaptación automática a dispositivos
+## 🏗️ Tecnologías Principales
 
-## Paleta de Colores Premium
+- **HTML5** - Estructura semántica
+- **Sass/SCSS** - Preprocesador modular
+- **Bootstrap 5** - Framework personalizado
+- **CSS Grid & Flexbox** - Layouts modernos
+- **Container Queries** - Diseño adaptativo
+- **PostCSS/Autoprefixer** - Compatibilidad
+- **Stylelint** - Linting de código
 
-| Color | Código HEX | Uso Principal |
-|-------|------------|---------------|
-| Azul Principal | `#1e3967` | Identidad, textos, elementos principales |
-| Azul Secundario | `#2c6d90` | Bordes, elementos secundarios, navegación |
-| Verde Agua | `#4ab5b1` | Estados, elementos visuales, acentos |
-| Amarillo Acento | `#f7c64b` | Llamadas a acción, elementos destacados |
-| Naranja Cálido | `#e67a4c` | Alertas, gradientes, elementos de contraste |
-
-## Tipografía y Accesibilidad
-
-- **Fuente principal**: Montserrat (Google Fonts)
-- **Escalado fluido**: Uso de `clamp()` para tamaños responsive
-- **Jerarquía visual**: Contraste adecuado y legibilidad óptima
-- **Accesibilidad**: Cumplimiento WCAG 2.1 AA
-- **Idioma**: Contenido en español con atributos `lang`
-
-## Configuración de Desarrollo
+## 🔧 Desarrollo
 
 ### Prerrequisitos
-- Node.js versión 16 o superior
-- npm versión 7 o superior
-- Git para control de versiones
+- Node.js ≥ 16
+- npm ≥ 7
+- Git
 
-### Instalación
-```bash
-# Clonar el repositorio
-git clone https://github.com/tomasaar/pec2_herramientas_htm_2.git
-cd pec2-herramientas-html-css
-
-# Instalar dependencias
-npm install
-```
-
-### Scripts Disponibles
-```bash
-# Compilar Sass y procesar CSS
-npm run build
-
-# Ejecutar linting de CSS
-npm run lint:css
-
-# Iniciar servidor de desarrollo
-npm start
-```
-
-### Configuración Stylelint
+### Configuración de Stylelint
 ```javascript
 module.exports = {
   extends: ['stylelint-config-standard-scss'],
+  plugins: ['stylelint-scss'],
   rules: {
     'color-function-notation': 'modern',
-    'import-notation': 'string',
-    'property-no-unknown': [
-      true,
-      {
-        ignoreProperties: ['/^--/']
-      }
-    ]
+    'scss/at-rule-no-unknown': true
   }
 };
 ```
 
-## Despliegue y Producción
+### Build Process
+1. **Sass** compila `src/scss/main.scss`
+2. **PostCSS** aplica autoprefixer
+3. Output: `dist/css/main.css`
 
-### Preparación para Despliegue
-1. Ejecutar `npm run build` para generar CSS optimizado
-2. Verificar que todas las imágenes estén en `src/assets/`
-3. Probar funcionalidad en diferentes navegadores
-4. Validar responsividad en múltiples dispositivos
+## 🚀 Despliegue
 
-### Opciones de Hosting
-- **GitHub Pages**: Despliegue directo desde el repositorio
-- **Netlify**: Hosting con CDN y formularios automáticos
-- **Vercel**: Despliegue con optimizaciones automáticas
+### Opción 1: GitHub Pages
+1. Push a rama `main`
+2. Settings → Pages → Source: `main`
+3. URL: `https://tomasaar.github.io/pec2_herramientas_htm_2/`
 
-### Optimizaciones de Producción
-- CSS minificado y autoprefijado
-- Imágenes optimizadas localmente
-- Carga eficiente de fuentes
-- Cache headers apropiados
+### Opción 2: Netlify
+1. Conectar repo en Netlify
+2. Build command: `npm run build`
+3. Publish directory: `src/`
 
-## Validación y Testing
+## ✅ Validación
 
-### Herramientas Utilizadas
-- **Stylelint**: Validación de sintaxis y mejores prácticas CSS
-- **Browser DevTools**: Testing responsive y debugging
-- **Lighthouse**: Auditoría de rendimiento y accesibilidad
-- **Manual testing**: Verificación en múltiples dispositivos
+### Build Status
+- ✅ Compilación sin errores
+- ✅ Linting aprobado
+- ✅ Responsive en todos dispositivos
+- ✅ Navegadores modernos compatibles
 
-### Resultados de Validación
-- ✅ Build exitoso sin errores de compilación
-- ✅ Linting pasa todas las reglas configuradas
-- ✅ Responsive en móviles (320px+), tablets y desktop
-- ✅ Compatibilidad con navegadores modernos (Chrome, Firefox, Safari, Edge)
-- ✅ Puntaje Lighthouse > 90 en rendimiento y accesibilidad
+### Performance
+- Lighthouse Score > 90
+- Imágenes locales (sin dependencias externas)
+- CSS optimizado y minificado
 
-## Autor
+## 👨‍💻 Autor
 
-**Tomás A. Rodríguez**
-- Máster en Desarrollo de Sitios y Aplicaciones Web
-- Universitat Oberta de Catalunya (UOC)
-- PEC2 - Herramientas HTML y CSS
+**Tomás A. Rodríguez**  
+*Máster Desarrollo Web - UOC*  
+PEC2 - Herramientas HTML y CSS
 
-## Repositorio
+## 📄 Licencia
 
-- **GitHub**: [https://github.com/tomasaar/pec2_herramientas_htm_2](https://github.com/tomasaar/pec2_herramientas_htm_2)
-- **Estado**: ✅ Proyecto completo y funcional
-- **Última actualización**: Mayo 2026
-
-## Conclusión
-
-Esta PEC2 demuestra el dominio de las tecnologías modernas de desarrollo front-end, con especial énfasis en CSS avanzado y mejores prácticas de desarrollo. El proyecto no solo cumple con todos los requisitos técnicos, sino que también presenta un diseño elegante y una experiencia de usuario excepcional.
-
-La implementación combina creatividad visual con rigurosidad técnica, resultando en un sitio web que es tanto estéticamente pleasing como técnicamente sólido. El código está bien documentado, modular y preparado para futuras ampliaciones o mantenimientos.
+Proyecto académico - UOC 2026
 
 ---
 
-*Desarrollado como parte del currículo de la Maestría en Desarrollo de Sitios y Aplicaciones Web de la UOC.*
+**Estado del proyecto**: ✅ Completo y funcional  
+**Última actualización**: Mayo 2026  
+**Repositorio**: [GitHub](https://github.com/tomasaar/pec2_herramientas_htm_2)
