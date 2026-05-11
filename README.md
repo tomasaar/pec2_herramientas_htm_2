@@ -47,6 +47,8 @@ Este proyecto implementa un sitio web responsive de 4 páginas para "Jornadas de
 pec2-herramientas-html-css/
 ├── src/
 │   ├── assets/               # Imágenes locales
+│   ├── css/                  # CSS compilado (generado)
+│   │   └── main.css          # CSS optimizado
 │   ├── scss/                 # Estilos Sass
 │   │   ├── main.scss         # Punto de entrada
 │   │   ├── _variables.scss   # Paleta de colores
@@ -56,9 +58,9 @@ pec2-herramientas-html-css/
 │   ├── ponentes.html         # Página ponentes
 │   ├── noticia.html          # Página agenda
 │   └── contacto.html         # Página contacto
-├── dist/css/main.css         # CSS compilado
 ├── package.json              # Dependencias
 ├── stylelint.config.js       # Configuración linting
+├── netlify.toml              # Configuración Netlify
 └── README.md                 # Esta documentación
 ```
 
@@ -134,7 +136,7 @@ module.exports = {
 ### Build Process
 1. **Sass** compila `src/scss/main.scss`
 2. **PostCSS** aplica autoprefixer
-3. Output: `dist/css/main.css`
+3. Output: `src/css/main.css` (dentro del directorio de publicación)
 
 ## 🚀 Despliegue
 
@@ -145,8 +147,9 @@ module.exports = {
 
 ### Opción 2: Netlify
 1. Conectar repo en Netlify
-2. Build command: `npm run build`
-3. Publish directory: `src/`
+2. **Build command**: `npm run build`
+3. **Publish directory**: `src/`
+4. El archivo `netlify.toml` configura automáticamente estos settings
 
 ## ✅ Validación
 
