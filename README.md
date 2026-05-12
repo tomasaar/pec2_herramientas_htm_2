@@ -2,32 +2,6 @@
 
 Este proyecto forma parte de la **PEC2 - Herramientas de desarrollo HTML y CSS** del Máster en Desarrollo de Sitios y Aplicaciones Web de la **Universitat Oberta de Catalunya (UOC)**. Consiste en una aplicación web multi-página (4 secciones) diseñada con un enfoque en CSS moderno, modularidad y optimización de rendimiento.
 
-## 🚀 Inicio Rápido
-
-Sigue estos pasos para desplegar el entorno de desarrollo localmente:
-
-1. **Clonar el repositorio**
-```bash
-git clone https://github.com/tomasaar/pec2_herramientas_htm_2.git
-cd pec2-herramientas-html-css
-```
-
-### 2. Instalar dependencias
-```bash
-npm install
-```
-
-### 3. Construir el proyecto
-```bash
-npm run build
-```
-
-### 4. Ejecutar en desarrollo
-```bash
-npm start
-```
-> Se abrirá automáticamente en http://localhost:5500
-
 ## 📋 Información del Proyecto
 
 **PEC2 - Herramientas HTML y CSS**  
