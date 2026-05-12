@@ -14,7 +14,7 @@ html {
 
 body {
   margin: 0;
-  min-height: 100svh;
+  height: 100svh;
   color: $body-color;
   background: radial-gradient(circle at top, rgba($secondary, 0.2), transparent 35%), linear-gradient(180deg, $body-bg 0%, #e9eff5 100%);
 }
@@ -56,7 +56,8 @@ img {
   left: 0;
   width: 100%;
   background: transparent !important;
-  border-bottom: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: none;
 }
 
 .page-home .site-header .navbar,
@@ -92,8 +93,8 @@ img {
 }
 
 .page-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 1.5rem 1.25rem 3rem;
   display: grid;
   gap: 2.5rem;
@@ -106,7 +107,6 @@ img {
 }
 
 .hero-copy {
-  padding: 2rem 1.75rem;
   background: rgb(255 255 255 / 72%);
   border-radius: var(--radius);
   border: 1px solid rgb(45 42 36 / 8%);
@@ -160,6 +160,7 @@ img {
 
 .feature-grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
   margin-top: 1.75rem;
 }
@@ -183,8 +184,8 @@ img {
 }
 
 .speaker-card {
-  flex: 1 1 18rem;
-  min-width: 18rem;
+  flex: 1 1 100%;
+  min-width: 0;
 }
 
 .speaker-avatar {
@@ -203,6 +204,7 @@ img {
 .article-page .article-body {
   display: grid;
   gap: 1.75rem;
+  grid-template-columns: 1fr;
 }
 
 .article-figure {
@@ -239,9 +241,9 @@ blockquote {
 .contact-panel {
   display: grid;
   gap: 2rem;
-  max-width: 800px;
+  max-width: 100%;
   width: 100%;
-  padding: 3rem;
+  padding: 2rem 1.25rem;
   background: transparent;
   border-radius: 0;
 }
@@ -264,10 +266,13 @@ blockquote {
 
 .contact-form {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .contact-form .form-control {
+  width: 100%;
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 0;
@@ -284,12 +289,13 @@ blockquote {
 }
 
 .contact-form .btn {
-  align-self: start;
+  align-self: stretch;
+  width: 100%;
   border: 2px solid $primary;
   background: transparent;
   color: $primary;
   border-radius: 0;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1rem;
   transition: all 0.3s ease;
   font-weight: 600;
 }
@@ -318,14 +324,14 @@ blockquote {
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(28rem, 42rem);
+  grid-template-areas:
+    "visual copy";
   align-items: center;
   justify-items: end;
   text-align: left;
   gap: 2rem;
   min-height: calc(100svh - 7rem);
-  padding: 2rem 2rem 3rem 2rem;
   width: 100vw;
-  max-width: 100%;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   left: 50%;
@@ -363,7 +369,7 @@ blockquote {
 .hero-poster .hero-copy {
   position: relative;
   z-index: 1;
-  width: min(100%, 42rem);
+  width: min(100%, 40rem);
   align-self: center;
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -509,6 +515,144 @@ blockquote {
   .footer-social {
     width: 100%;
   }
+
+  .page-wrapper {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .page-home .navbar-collapse {
+    background: rgba(15, 23, 42, 0.88) !important;
+    padding: 1rem 1rem 1.25rem;
+  }
+
+  .page-home .navbar-collapse.show {
+    position: relative;
+    z-index: 101;
+  }
+
+  .page-home .navbar-collapse .nav-link {
+    color: #fff;
+  }
+
+  .page-home .site-header {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    background-clip: padding-box;
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+  }
+
+  .hero-poster {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100svh;
+    padding: 0;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 80%;
+    padding: 1rem 1.25rem;
+    margin-top: 6rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .speaker-card {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .article-body {
+    grid-template-columns: 1fr;
+  }
+
+  .article-aside {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-panel {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-panel {
+    width: 100%;
+    max-width: 42rem;
+    padding: 1.5rem 1rem;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+    gap: 1.5rem;
+  }
+
+  .contact-panel header {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-panel h1 {
+    font-size: 2rem;
+  }
+
+  .contact-panel p {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    gap: 1rem;
+  }
+
+  .contact-form .form-control {
+    padding: 0.75rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+  }
+
+  .contact-info {
+    text-align: left;
+  }
+
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+  }
+
+  .contact-wrapper {
+    height: auto;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 1rem 0.75rem 2rem;
+  }
 }
 
 @supports (display: grid) {
@@ -534,7 +678,6 @@ blockquote {
   }
 
   .contact-panel {
-    grid-template-columns: minmax(0, 1.3fr) minmax(22rem, 1fr);
     align-items: start;
   }
 }

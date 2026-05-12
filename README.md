@@ -1,8 +1,12 @@
-# PEC2 - Jornadas de Artesanía
+# PEC2 - Plataforma Digital "Jornadas de Artesanía"
+
+Este proyecto forma parte de la **PEC2 - Herramientas de desarrollo HTML y CSS** del Máster en Desarrollo de Sitios y Aplicaciones Web de la **Universitat Oberta de Catalunya (UOC)**. Consiste en una aplicación web multi-página (4 secciones) diseñada con un enfoque en CSS moderno, modularidad y optimización de rendimiento.
 
 ## 🚀 Inicio Rápido
 
-### 1. Clonar el repositorio
+Sigue estos pasos para desplegar el entorno de desarrollo localmente:
+
+1. **Clonar el repositorio**
 ```bash
 git clone https://github.com/tomasaar/pec2_herramientas_htm_2.git
 cd pec2-herramientas-html-css
