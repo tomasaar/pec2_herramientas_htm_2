@@ -121,19 +121,6 @@ module.exports = {
 3. **Publish directory**: `src/`
 4. El archivo `netlify.toml` configura automáticamente estos settings
 
-## ✅ Validación
-
-### Build Status
-- ✅ Compilación sin errores
-- ✅ Linting aprobado
-- ✅ Responsive en todos dispositivos
-- ✅ Navegadores modernos compatibles
-
-### Performance
-- Lighthouse Score > 90
-- Imágenes locales (sin dependencias externas)
-- CSS optimizado y minificado
-
 ## 👨‍💻 Autor
 
 **Tomás A. Rodríguez**  
