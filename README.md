@@ -10,14 +10,6 @@ Este proyecto forma parte de la **PEC2 - Herramientas de desarrollo HTML y CSS**
 
 Este proyecto implementa un sitio web responsive de 4 páginas para "Jornadas de Artesanía" utilizando tecnologías modernas de CSS.
 
-## 🎯 Características Implementadas
-
-- ✅ 4 páginas responsive (inicio, ponentes, agenda, contacto)
-- ✅ Sass + Bootstrap 5 personalizado
-- ✅ CSS moderno (Grid, Flexbox, container queries, :has/:is)
-- ✅ Stylelint configurado
-- ✅ Imágenes locales optimizadas
-- ✅ Diseño glassmorphism y gradientes premium
 
 ## 📁 Estructura del Proyecto
 
