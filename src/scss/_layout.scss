@@ -34,7 +34,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: linear-gradient(135deg, darken($primary, 5%) 0%, $secondary 100%);
+  background: linear-gradient(135deg, color.adjust($primary, $lightness: -5%) 0%, $secondary 100%);
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba($warning, 0.18);
 }
@@ -56,7 +56,7 @@ img {
   left: 0;
   width: 100%;
   background: transparent !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgb(255 255 255 / 18%);
   box-shadow: none;
 }
 
@@ -73,7 +73,7 @@ img {
 }
 
 .page-home .navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.7);
+  border-color: rgb(255 255 255 / 70%);
 }
 
 .page-home .navbar-toggler-icon {
@@ -89,7 +89,7 @@ img {
 }
 
 .site-header .navbar-nav .nav-link:hover {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .page-wrapper {
@@ -138,11 +138,11 @@ img {
 
 .btn-outline-secondary {
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.8);
+  border-color: rgb(255 255 255 / 80%);
 }
 
 .btn-outline-secondary:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgb(255 255 255 / 14%);
   color: #fff;
   border-color: $warning;
   transform: translateY(-2px);
@@ -217,7 +217,7 @@ blockquote {
   margin: 1.5rem 0;
   padding: 1.25rem 1.5rem;
   border-left: 6px solid $secondary;
-  background: rgba(44, 109, 144, 0.1);
+  background: rgb(44 109 144 / 10%);
   font-style: italic;
 }
 
@@ -274,7 +274,7 @@ blockquote {
 .contact-form .form-control {
   width: 100%;
   border: none;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgb(0 0 0 / 10%);
   border-radius: 0;
   background: transparent;
   padding: 0.75rem 0;
@@ -312,6 +312,7 @@ blockquote {
     margin-bottom: 1rem;
     color: $secondary;
   }
+
   p {
     margin: 0.5rem 0;
     display: flex;
@@ -326,8 +327,7 @@ blockquote {
   grid-template-columns: minmax(0, 1fr) minmax(28rem, 42rem);
   grid-template-areas:
     "visual copy";
-  align-items: center;
-  justify-items: end;
+  place-items: center end;
   text-align: left;
   gap: 2rem;
   min-height: calc(100svh - 7rem);
@@ -345,7 +345,7 @@ blockquote {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(30, 57, 103, 0.96), rgba(44, 109, 144, 0.92));
+  background: linear-gradient(180deg, rgb(30 57 103 / 96%), rgb(44 109 144 / 92%));
   z-index: 0;
 }
 
@@ -356,7 +356,7 @@ blockquote {
   width: 100%;
   height: 100%;
   display: block;
-  background-color: rgba(30, 57, 103, 0.55);
+  background-color: rgb(30 57 103 / 55%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -371,9 +371,9 @@ blockquote {
   z-index: 1;
   width: min(100%, 40rem);
   align-self: center;
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 0.75rem 2rem rgba(30, 57, 103, 0.18);
+  background: rgb(255 255 255 / 16%);
+  border: 1px solid rgb(255 255 255 / 22%);
+  box-shadow: 0 0.75rem 2rem rgb(30 57 103 / 18%);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   border-radius: 2rem;
@@ -387,7 +387,7 @@ blockquote {
 }
 
 .hero-poster .hero-copy .lead {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgb(255 255 255 / 82%);
 }
 
 .page-home .hero-poster {
@@ -413,7 +413,7 @@ blockquote {
 
 .hero-poster .lead {
   margin: 1.25rem auto 0;
-  color: rgba(45, 42, 36, 0.82);
+  color: rgb(45 42 36 / 82%);
 }
 
 .article-hero {
@@ -422,7 +422,7 @@ blockquote {
   text-align: center;
   gap: 1.5rem;
   padding: 3rem 1.5rem;
-  background: rgba(74, 181, 177, 0.1);
+  background: rgb(74 181 177 / 10%);
   border-radius: 2rem;
   margin-bottom: 2rem;
 }
@@ -433,8 +433,8 @@ blockquote {
   border-radius: 1.5rem;
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(45, 42, 36, 0.08);
+  background: rgb(255 255 255 / 92%);
+  border: 1px solid rgb(45 42 36 / 8%);
 }
 
 .article-hero-visual i {
@@ -452,7 +452,7 @@ blockquote {
 
 .article-hero .byline {
   margin: 0;
-  opacity: 0.7;
+  opacity: 70%;
 }
 
 .site-footer {
@@ -485,28 +485,28 @@ blockquote {
 .footer-nav a {
   text-decoration: none;
   color: #fff;
-  opacity: 0.8;
+  opacity: 80%;
   transition: opacity 0.2s ease;
 }
 
 .footer-nav a:hover {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .footer-social a {
   margin-left: 0.75rem;
   color: #fff;
-  opacity: 0.8;
+  opacity: 80%;
 }
 
 .footer-bottom {
   margin-top: 1rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgb(255 255 255 / 65%);
   font-size: 0.9rem;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
@@ -521,7 +521,7 @@ blockquote {
   }
 
   .page-home .navbar-collapse {
-    background: rgba(15, 23, 42, 0.88) !important;
+    background: rgb(15 23 42 / 88%) !important;
     padding: 1rem 1rem 1.25rem;
   }
 
@@ -535,12 +535,12 @@ blockquote {
   }
 
   .page-home .site-header {
-    background: rgba(255, 255, 255, 0.22) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgb(255 255 255 / 22%) !important;
+    border-bottom: 1px solid rgb(255 255 255 / 18%);
     background-clip: padding-box;
     -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 16px 40px rgb(0 0 0 / 14%);
   }
 
   .hero-poster {
@@ -603,9 +603,9 @@ blockquote {
     width: 100%;
     max-width: 42rem;
     padding: 1.5rem 1rem;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgb(255 255 255 / 92%);
     border-radius: 1.5rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 8%);
     gap: 1.5rem;
   }
 
@@ -663,7 +663,7 @@ blockquote {
       "copy";
     align-items: center;
 
-    @media (min-width: 65rem) {
+    @media (width >= 65rem) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "copy visual";
     }

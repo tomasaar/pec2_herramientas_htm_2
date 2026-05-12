@@ -54,7 +54,7 @@ h1 {
   transition: all 0.3s ease;
   
   &:hover {
-    background-color: darken($warning, 10%);
+    background-color: color.adjust($warning, $lightness: -10%);
     color: $primary;
     transform: translateY(-2px);
   }

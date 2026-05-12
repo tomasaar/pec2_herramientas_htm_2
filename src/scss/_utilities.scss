@@ -2,9 +2,9 @@
 @layer utilities {
   .contact-panel {
     // Uso de colores hwb y unidades relativas al contenedor
-    background-color: hwb(42 90% 5%);
+    background-color: hwb(42deg 90% 5%);
     padding: 5cqi; 
-    border: 2px solid hwb(218 40% 20% / 0.1);
+    border: 2px solid hwb(218deg 40% 20% / 10%);
   }
 }
 
